@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "supabase-gen-types": "supabase gen types --lang=typescript --project-id fcqqajwrikawzflldqpo > src/database.types.ts",
     "build": "tsc -b && vite build --outDir docs --base /liste-de-naissance",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdxeditor/editor": "^3.8.0",
     "@supabase/auth-ui-react": "^0.4.7",
     "@supabase/auth-ui-shared": "^0.1.8",
     "@supabase/supabase-js": "^2.44.3",
+    "@uiw/react-markdown-preview": "^5.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
