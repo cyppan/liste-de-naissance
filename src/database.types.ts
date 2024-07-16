@@ -89,6 +89,24 @@ export type Database = {
           },
         ]
       }
+      welcome_message: {
+        Row: {
+          content: string | null
+          id: number
+          updated_at: string | null
+        }
+        Insert: {
+          content?: string | null
+          id?: number
+          updated_at?: string | null
+        }
+        Update: {
+          content?: string | null
+          id?: number
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

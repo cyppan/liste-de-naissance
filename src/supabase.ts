@@ -97,6 +97,4 @@ export function assertIsDefined<T>(
 }
 
 export const getImageUrl = (path: string) =>
-  `https://${projectId}.supabase.co/storage/v1/object/public/images/${encodeURIComponent(
-    path
-  )}`;
+  `https://${projectId}.supabase.co/storage/v1/object/public/images/${path}`;

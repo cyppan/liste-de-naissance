@@ -40,10 +40,13 @@ const getItemFromForm = async (
   const formData = new FormData(form);
   const name = formData.get("item_name") as string;
   const file = formData.get("item_image") as File;
+  let fileNameHash = "";
   if (file.name) {
+    const extension = file.name.split(".").pop();
+    fileNameHash = `${encodeURIComponent(btoa(file.name))}.${extension}`;
     const { error } = await supabase.storage
       .from("images")
-      .upload(encodeURIComponent(file.name), file, {
+      .upload(fileNameHash, file, {
         cacheControl: "3600",
         upsert: false,
       });
@@ -54,7 +57,7 @@ const getItemFromForm = async (
       throw new Error(message);
     }
   }
-  const newImageUrl = file.name ? getImageUrl(file.name) : imageUrl;
+  const newImageUrl = fileNameHash ? getImageUrl(fileNameHash) : imageUrl;
   return {
     name,
     description,

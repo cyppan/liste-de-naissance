@@ -4,6 +4,7 @@ import { Auth } from "@supabase/auth-ui-react";
 import { I18nVariables, ThemeSupa } from "@supabase/auth-ui-shared";
 import { supabase } from "./supabase";
 import { Items } from "./Items";
+import { WelcomeMessage } from "./WelcomeMessage";
 
 const translations: I18nVariables = {
   sign_up: {
@@ -29,7 +30,7 @@ const translations: I18nVariables = {
     link_text: "Envoyer un lien de connexion par email",
   },
   forgotten_password: {
-    confirmation_text: "Confirmer le mot de passe",
+    confirmation_text: "email de réinitialisation envoyé",
     password_label: "Mot de passe",
     button_label: "Envoyer le lien",
     email_input_placeholder: "Email",
@@ -148,6 +149,7 @@ function App() {
           </div>
         </div>
         {/* <!-- CONTENT --> */}
+        <WelcomeMessage />
         <Items
           setShowLoginScreen={setShowLoginScreen}
           className="w-full max-w-5xl mx-auto px-2 md:px-4"
