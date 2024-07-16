@@ -17,6 +17,9 @@ body {
 
 .wmde-markdown {
   background-color: inherit !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
 }
 
 #root {

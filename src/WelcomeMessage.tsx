@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { supabase, useCurrentUser, useSupabase } from "./supabase";
+import MarkdownPreview from "@uiw/react-markdown-preview";
 import {
   MDXEditor,
   toolbarPlugin,
@@ -85,7 +86,7 @@ export const WelcomeMessage = () => {
     <div className="w-full px-4 relative">
       <blockquote className="p-4 border-s-4 border-gray-300 bg-gray-100">
         <p className="text-xl italic font-medium leading-relaxed text-gray-900">
-          {messageResult.data[0].content}
+          <MarkdownPreview source={messageResult.data[0].content ?? ""} />
         </p>
       </blockquote>
       {/* <div className="bg-neutral-400 text-white text-lg border-2 p-4 rounded-md"></div> */}

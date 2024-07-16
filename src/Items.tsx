@@ -134,10 +134,7 @@ export const Items: FC<ItemsProps> = ({ className, setShowLoginScreen }) => {
                       )}
                     </div>
                     <div>
-                      <MarkdownPreview
-                        className="bg-opacity-50"
-                        source={item.description ?? undefined}
-                      />
+                      <MarkdownPreview source={item.description ?? undefined} />
                     </div>
                   </div>
                 </div>
