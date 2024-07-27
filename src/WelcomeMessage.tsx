@@ -84,8 +84,8 @@ export const WelcomeMessage = () => {
     </div>
   ) : (
     <div className="w-full px-4 relative">
-      <blockquote className="p-4 border-s-4 border-gray-300 bg-gray-100">
-        <p className="text-xl italic font-medium leading-relaxed text-gray-900">
+      <blockquote className="p-4 border-s-4 border-gray-300 bg-yellow-50">
+        <p className="text-lg italic font-thin leading-relaxed text-gray-900">
           <MarkdownPreview source={messageResult.data[0].content ?? ""} />
         </p>
       </blockquote>
