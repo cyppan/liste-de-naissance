@@ -69,7 +69,6 @@ function App() {
       setSession(session);
       if (session) {
         setShowLoginScreen(false);
-        window.location.href = "/";
       }
     });
 
@@ -83,7 +82,6 @@ function App() {
               if (refreshedSession) {
                 setSession(refreshedSession);
                 setShowLoginScreen(false);
-                window.location.href = "/";
               }
             });
         }
