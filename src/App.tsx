@@ -33,6 +33,7 @@ const translations: I18nVariables = {
     email_input_label: "Email",
     email_input_placeholder: "Email",
     empty_email_address: "Email vide",
+    loading_button_label: "Chargement...",
   },
   forgotten_password: {
     confirmation_text: "email de réinitialisation envoyé",
@@ -68,6 +69,7 @@ function App() {
       setSession(session);
       if (session) {
         setShowLoginScreen(false);
+        window.location.href = "/";
       }
     });
 
@@ -81,6 +83,7 @@ function App() {
               if (refreshedSession) {
                 setSession(refreshedSession);
                 setShowLoginScreen(false);
+                window.location.href = "/";
               }
             });
         }
@@ -118,7 +121,7 @@ function App() {
             providers={[]}
             redirectTo="https://naissance-liste.fr"
             view="sign_up"
-          />
+          ></Auth>
         </div>
       </div>
     );
