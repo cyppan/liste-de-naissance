@@ -28,6 +28,11 @@ const translations: I18nVariables = {
   },
   magic_link: {
     link_text: "Envoyer un lien de connexion par email",
+    button_label: "Envoyer le lien",
+    confirmation_text: "Email envoyé",
+    email_input_label: "Email",
+    email_input_placeholder: "Email",
+    empty_email_address: "Email vide",
   },
   forgotten_password: {
     confirmation_text: "email de réinitialisation envoyé",
