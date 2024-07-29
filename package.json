@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "supabase-gen-types": "supabase gen types --lang=typescript --project-id fcqqajwrikawzflldqpo > src/database.types.ts",
-    "build": "tsc -b && vite build --outDir docs --base /liste-de-naissance",
+    "build": "tsc -b && vite build --outDir docs --base /",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
