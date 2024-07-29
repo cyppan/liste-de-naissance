@@ -111,7 +111,7 @@ function App() {
             supabaseClient={supabase}
             appearance={{ theme: ThemeSupa }}
             providers={[]}
-            redirectTo="http://localhost:5173/"
+            redirectTo="https://naissance-liste.fr"
             view="sign_up"
           />
         </div>
